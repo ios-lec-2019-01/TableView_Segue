@@ -23,7 +23,6 @@ class ViewController: UIViewController, UITableViewDataSource {
         self.title = "동물농장"
     }
 
-
     //
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return animals.count

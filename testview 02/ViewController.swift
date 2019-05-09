@@ -10,16 +10,17 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource {
     
-    
-    
     @IBOutlet weak var myTableView: UITableView!
-    var animals = ["Cat", "Dog", "Cow", "Pig", "Horse", "Whale", "Bird"]
-    var year = ["3", "5", "10", "2", "6", "3", "2"]
+    var animals = ["Cat", "Dog", "Pig", "Horse", "Whale", "Bird"]
+    var year = ["3", "5", "10",  "6", "3", "2"]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         // delegate 객체와 ViewController의 연결
         myTableView.dataSource = self
+        
+        // NavigationBar에 title 추가
+        self.title = "동물농장"
     }
 
 
@@ -30,7 +31,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     //section 몇번 사용 할것인가?
     public func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
     
     //헤드 네임
